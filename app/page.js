@@ -85,7 +85,7 @@ export default function Home() {
             className="relative"
           >
             <Image
-              src="/images/image1.jfif"
+              src="/images/image1.jpg"
               alt="Pest Control Service"
               width={600}
               height={450}
