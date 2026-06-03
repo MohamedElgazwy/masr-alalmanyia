@@ -1,24 +1,23 @@
-import CallButtons from "@/app/components/CallButtons";
+import CallButtons from "../components/CallButtons";
 
 export const metadata = {
-  title: "تواصل معنا | Nabd Alhayaat",
-  description: "تواصل مع نبض الحياة للرعاية الصحية المنزلية",
+  title: "تواصل معنا | شركة الدرع لإبادة الحشرات",
+  description: "تواصل مع شركة الدرع لطلب معاينة أو الاستفسار عن خدمات مكافحة الحشرات",
 };
 
 export default function ContactPage() {
-  const phone = "201024193594";
+  const phone = "01111104638"; // رقم الهاتف الرئيسي لشركة الدرع
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-slate-50/50">
       {/* HERO */}
-      <section className="bg-blue-50 py-20 text-center">
-        <h1 className="text-4xl font-bold text-blue-700 mb-6">
+      <section className="bg-emerald-50/60 py-20 text-center border-b border-emerald-100">
+        <h1 className="text-4xl font-bold text-emerald-800 mb-6">
           تواصل معنا
         </h1>
 
-        <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-          فريق Nabd Alhayaat جاهز للرد على جميع استفساراتك
-          ومساعدتك في اختيار الخدمة المناسبة لحالتك.
+        <p className="text-slate-700 text-lg max-w-2xl mx-auto px-4">
+          فريق المهندسين في شركة الدرع جاهز للرد على جميع استفساراتك وتحديد موعد لمعاينة المكان والبدء في عملية الإبادة الفورية.
         </p>
       </section>
 
@@ -26,23 +25,23 @@ export default function ContactPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           
-          <div className="text-gray-700 text-lg">
-            📞 رقم الهاتف:
-            <span className="font-semibold mx-2">
-              {phone}
+          <div className="text-slate-700 text-lg flex items-center justify-center gap-2">
+            <span>📞 رقم الهاتف:</span>
+            <span className="font-bold text-emerald-700 dir-ltr">
+              +{phone}
             </span>
           </div>
 
-          <div className="text-gray-700 text-lg">
-            📧 البريد الإلكتروني:
-            <span className="font-semibold mx-2">
-              nabdalhayaat123@gmail.com
+          <div className="text-slate-700 text-lg flex items-center justify-center gap-2">
+            <span>📧 البريد الإلكتروني:</span>
+            <span className="font-bold text-emerald-700">
+              info@eldaraapest.com
             </span>
           </div>
 
           {/* CTA BUTTONS */}
           <div className="pt-10 flex justify-center">
-            <CallButtons serviceName="الاستفسار عن خدمات Nabd Alhayaat" />
+            <CallButtons serviceName="طلب معاينة مكافحة حشرات" />
           </div>
         </div>
       </section>

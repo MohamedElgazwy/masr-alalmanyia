@@ -2,17 +2,19 @@
 
 import { Button } from "@/components/ui/button";
 
+
 export default function ServiceCTA({
   serviceName,
-  phone = "201024193594",
+  phone = "01111104638", // رقم الهاتف الرئيسي لشركة الدرع، تأكد من تحديثه إذا تغير في المستقبل
 }) {
-  const message = `مرحبًا،
-كيف يمكنني حجز ${serviceName}؟
+  const message = `مرحبًا شركة الدرع، 👋
+أود حجز خدمة: *${serviceName}*
 
 الاسم:
 رقم التواصل:
-العنوان:
-التاريخ الطبي الموجز:`;
+العنوان بالتفصيل:
+نوع الآفة / الحشرات المنتشرة:
+الموعد المفضل للمعاينة والرش:`;
 
   const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(
     message
@@ -25,7 +27,7 @@ export default function ServiceCTA({
       {/* Call Button */}
       <Button
         asChild
-        className="bg-blue-700 hover:bg-blue-800 text-white"
+        className="bg-emerald-800 hover:bg-emerald-900 text-white font-medium px-6 py-2.5 transition-colors"
       >
         <a href={callLink}>📞 اتصال الآن</a>
       </Button>
@@ -33,9 +35,9 @@ export default function ServiceCTA({
       {/* WhatsApp Button */}
       <Button
         asChild
-        className="bg-green-600 hover:bg-green-700 text-white"
+        className="bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-2.5 transition-colors"
       >
-        <a href={whatsappLink} target="_blank">
+        <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
           💬 تواصل عبر واتساب
         </a>
       </Button>

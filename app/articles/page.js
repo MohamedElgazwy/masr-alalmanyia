@@ -1,8 +1,8 @@
 import ArticlesClient from "./ArticlesClient";
 
 export const metadata = {
-  title: "مقالات | Nabd Alhayaat",
-  description: "تواصل مع نبض الحياة للرعاية الصحية المنزلية",
+  title: "نصائح وإرشادات | شركة الدرع لإبادة الحشرات",
+  description: "دليلك الشامل للوقاية من الحشرات ومكافحة الآفات المنزلية والتجارية.",
 };
 
 export default function Page() {

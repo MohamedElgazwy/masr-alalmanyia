@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../public/images/logo.jpg";
+// import logo from "../../public/images/logo.jpg";
 
 /* Animation Variants */
 const mobileMenu = {
@@ -26,14 +26,15 @@ export default function Navbar() {
         
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <Image
+          {/* <Image
             src={logo}
             alt="Nabd Alhayaat Logo"
             width={48}
             height={48}
             priority
             className="hover:scale-105 transition-transform duration-300"
-          />
+          /> */}
+          <span className="text-xl font-bold text-emerald-800">Misr Alalmanyia</span>
         </Link>
 
         {/* Desktop Links */}

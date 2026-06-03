@@ -24,7 +24,7 @@ function Counter({ end, suffix = "", duration = 2 }) {
   }, [end, duration]);
 
   return (
-    <span className="text-4xl font-bold text-blue-700">
+    <span className="text-4xl font-bold text-emerald-800">
       {count}
       {suffix}
     </span>
@@ -33,10 +33,10 @@ function Counter({ end, suffix = "", duration = 2 }) {
 
 export default function StatsCounters() {
   const stats = [
-    { label: "سنوات خبرة", value: 10, suffix: "+" },
-    { label: "مريض تم خدمتهم", value: 12000, suffix: "+" },
-    { label: "خدمة طبية", value: 15, suffix: "+" },
-    { label: "تغطية محافظات", value: 8, suffix: "+" },
+    { label: "سنوات خبرة في السوق", value: 12, suffix: "+" },
+    { label: "منشأة وعقار تم تأمينهم", value: 18500, suffix: "+" },
+    { label: "مهندس وفني متخصص", value: 45, suffix: "+" },
+    { label: "محافظة نغطيها بالكامل", value: 12, suffix: "" },
   ];
 
   return (
@@ -52,10 +52,10 @@ export default function StatsCounters() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-slate-50 rounded-xl p-6 shadow-sm hover:shadow-md transition"
+              className="bg-slate-50 rounded-xl p-6 shadow-sm hover:shadow-md transition border border-slate-100"
             >
               <Counter end={stat.value} suffix={stat.suffix} />
-              <p className="mt-3 text-gray-600 font-medium">
+              <p className="mt-3 text-slate-600 font-medium text-sm">
                 {stat.label}
               </p>
             </div>

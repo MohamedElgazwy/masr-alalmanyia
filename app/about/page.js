@@ -1,29 +1,24 @@
-
-
 export const metadata = {
-  title: "من نحن | Nabd Alhayaat",
-  description: "تعرف على نبض الحياة للرعاية الصحية المنزلية",
+  title: "من نحن | شركة الدرع لإبادة الحشرات",
+  description: "تعرف على شركة الدرع الرائدة في مجال مكافحة الآفات وإبادة الحشرات في مصر",
 };
 
-import StatsCounters from "@/app/components/StatsCounters";
+import StatsCounters from "../components/StatsCounters";
 import WhyChooseUs from "../components/WhyChooseUs";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-slate-50/50">
       {/* HERO */}
-      <section className="bg-blue-50 py-20 text-center">
-        <h1 className="text-4xl font-bold text-blue-700 mb-6">
+      <section className="bg-emerald-50/60 py-20 text-center border-b border-emerald-100">
+        <h1 className="text-4xl font-bold text-emerald-800 mb-6">
           من نحن
         </h1>
 
-        <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
-          Nabd Alhayaat هي مؤسسة متخصصة في تقديم خدمات الرعاية الصحية
-          والتمريض المنزلي باحترافية عالية، مع التركيز على راحة المريض
-          وجودة الخدمة داخل منزله.
+        <p className="max-w-3xl mx-auto text-slate-700 text-lg leading-relaxed px-4">
+          شركة الدرع هي مؤسسة متخصصة ورائدة في تقديم حلول الإبادة ومكافحة الآفات باحترافية عالية، مع التركيز التام على صحة وأمان أسرتك أو بيئة عملك من خلال استخدام أفضل الأمصال المعتمدة.
         </p>
       </section>
-
 
       <StatsCounters />
 
@@ -33,25 +28,21 @@ export default function AboutPage() {
           
           {/* Vision */}
           <div>
-            <h2 className="text-2xl font-bold text-blue-700 mb-4">
-              رؤيتنا
+            <h2 className="text-2xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
+              <span className="text-amber-500">🎯</span> رؤيتنا
             </h2>
-            <p className="text-gray-700 leading-relaxed">
-              أن نكون الخيار الأول للرعاية الصحية المنزلية في مصر،
-              من خلال تقديم خدمات آمنة، متكاملة، وسريعة الوصول،
-              مع الالتزام الكامل بمعايير الجودة وسلامة المرضى.
+            <p className="text-slate-700 leading-relaxed">
+              أن نكون الخيار الأول والأكثر ثقة لمكافحة الحشرات في مصر، من خلال تقديم خدمات آمنة، فعالة، وممتدة المفعول، مع الالتزام الصارم بمعايير الحفاظ على البيئة والصحة العامة.
             </p>
           </div>
 
           {/* Mission */}
           <div>
-            <h2 className="text-2xl font-bold text-blue-700 mb-4">
-              رسالتنا
+            <h2 className="text-2xl font-bold text-emerald-800 mb-4 flex items-center gap-2">
+              <span className="text-amber-500">🚀</span> رسالتنا
             </h2>
-            <p className="text-gray-700 leading-relaxed">
-              توفير رعاية طبية وتمريضية متخصصة داخل المنزل،
-              بأيدي طاقم طبي محترف، باستخدام أحدث الأساليب الطبية،
-              لضمان أفضل نتائج علاجية وراحة نفسية للمريض وأسرته.
+            <p className="text-slate-700 leading-relaxed">
+              توفير حماية متكاملة للمنشآت السكنية والتجارية ضد كافة أنواع الآفات، بأيدي فريق هندسي وفني محترف، وباستخدام أحدث تقنيات الإبادة الألمانية لضمان بيئة نظيفة خالية من الحشرات.
             </p>
           </div>
 

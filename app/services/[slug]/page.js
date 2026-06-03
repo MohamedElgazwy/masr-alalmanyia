@@ -7,18 +7,12 @@ import { servicesData } from "@/app/data/services";
 import Reveal from "@/app/components/Reveal";
 import CounterNumbers from "@/app/components/CounterNumbers";
 
-/* ===========================
-   Static Generation (SEO Boost)
-=========================== */
 export async function generateStaticParams() {
   return Object.keys(servicesData).map((slug) => ({
     slug,
   }));
 }
 
-/* ===========================
-   Dynamic Metadata (VERY IMPORTANT)
-=========================== */
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const service = servicesData[slug];
@@ -30,10 +24,10 @@ export async function generateMetadata({ params }) {
     description: service.description,
     keywords: [
       service.title,
-      "رعاية منزلية",
-      "خدمات طبية منزلية",
-      "تمريض منزلي في مصر",
-      "نبض الحياة للرعاية المنزلية",
+      "إبادة حشرات بضمان",
+      "أفضل شركة رش حشرات",
+      "أسعار شركات مكافحة الحشرات",
+      "شركة الدرع لإبادة الحشرات",
     ],
     openGraph: {
       title: service.title,
@@ -44,16 +38,13 @@ export async function generateMetadata({ params }) {
           url: service.image,
           width: 1200,
           height: 630,
-          alt: `خدمة ${service.title} من نبض الحياة`,
+          alt: `خدمة ${service.title} من شركة الدرع`,
         },
       ],
     },
   };
 }
 
-/* ===========================
-   Page Component
-=========================== */
 export default async function ServicePage({ params }) {
   const { slug } = await params;
   const service = servicesData[slug];
@@ -62,22 +53,22 @@ export default async function ServicePage({ params }) {
 
   return (
     <>
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-slate-50/30">
         {/* HERO */}
-        <section className="bg-blue-50 py-20">
+        <section className="bg-emerald-50/50 py-20 border-b border-emerald-100">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             
             <Reveal>
               <div>
-                <h1 className="text-4xl font-bold text-blue-700 mb-4">
+                <h1 className="text-4xl font-bold text-emerald-800 mb-4">
                   {service.title}
                 </h1>
 
-                <p className="text-xl text-gray-700 mb-6">
+                <p className="text-xl text-amber-600 font-semibold mb-6">
                   {service.tagline}
                 </p>
 
-                <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                <p className="text-slate-700 text-lg leading-relaxed mb-8">
                   {service.description}
                 </p>
 
@@ -88,12 +79,12 @@ export default async function ServicePage({ params }) {
             <Reveal delay={0.2}>
               <Image
                 src={service.image}
-                alt={`خدمة ${service.title} من نبض الحياة للرعاية المنزلية`}
+                alt={`خدمة ${service.title} من شركة الدرع لإبادة الحشرات`}
                 width={600}
                 height={450}
                 priority
                 sizes="(max-width: 768px) 100vw, 600px"
-                className="rounded-2xl shadow-lg w-full h-auto"
+                className="rounded-2xl shadow-xl w-full h-auto object-cover border-4 border-white"
               />
             </Reveal>
 
@@ -104,16 +95,17 @@ export default async function ServicePage({ params }) {
         <section className="py-20 bg-white">
           <div className="max-w-5xl mx-auto px-6">
             <Reveal>
-              <h2 className="text-3xl font-bold text-blue-700 mb-10 text-center">
-                نطاق الخدمة
+              <h2 className="text-3xl font-bold text-emerald-800 mb-10 text-center">
+                خطوات ومراحل تنفيذ الخدمة
               </h2>
             </Reveal>
 
             <ul className="grid md:grid-cols-2 gap-6">
               {service.scopes.map((item, i) => (
                 <Reveal key={i} delay={i * 0.1}>
-                  <li className="bg-slate-50 p-5 rounded-xl shadow-sm text-gray-700">
-                    {item}
+                  <li className="bg-slate-50 p-5 rounded-xl shadow-sm text-slate-700 border border-slate-100 flex items-start gap-3">
+                    <span className="text-emerald-700 font-bold">✔</span>
+                    <span>{item}</span>
                   </li>
                 </Reveal>
               ))}
@@ -125,14 +117,14 @@ export default async function ServicePage({ params }) {
         <CounterNumbers />
 
         {/* FINAL CTA */}
-        <section className="py-20 bg-blue-50 text-center">
+        <section className="py-20 bg-emerald-50/40 text-center border-t border-emerald-100">
           <Reveal>
-            <h2 className="text-3xl font-bold text-blue-700 mb-6">
-              احجز الآن بسهولة
+            <h2 className="text-3xl font-bold text-emerald-800 mb-6">
+              احجز موعد المعاينة والرش الآن
             </h2>
 
-            <p className="text-gray-700 mb-8">
-              تواصل معنا الآن وسيقوم فريقنا الطبي بالرد عليك في أسرع وقت
+            <p className="text-slate-700 mb-8 max-w-xl mx-auto">
+              تواصل معنا الآن وسيقوم الفريق الهندسي المختص بتحديد نوع الإصابة ووضع خطة الإبادة الفورية الملائمة لمنشأتك.
             </p>
 
             <CallButtons serviceName={service.serviceNameForWhatsApp} />
@@ -140,7 +132,6 @@ export default async function ServicePage({ params }) {
         </section>
       </main>
 
-      {/* Structured Data per Service */}
       <Script
         id="service-schema"
         type="application/ld+json"
@@ -148,13 +139,13 @@ export default async function ServicePage({ params }) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "MedicalProcedure",
-            name: service.title,
-            description: service.description,
-            provider: {
-              "@type": "MedicalBusiness",
-              name: "نبض الحياة للرعاية المنزلية",
-              url: "https://nabdalhayaat.com",
+            "@type": "Service",
+            "name": service.title,
+            "description": service.description,
+            "provider": {
+              "@type": "HomeAndConstructionBusiness",
+              "name": "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
+              "url": "https://eldaraapest.com",
             },
           }),
         }}

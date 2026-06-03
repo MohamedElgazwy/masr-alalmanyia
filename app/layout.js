@@ -15,28 +15,29 @@ const cairo = Cairo({
 
 export const metadata = {
   title: {
-    default: "نبض الحياة للرعاية المنزلية",
-    template: "%s | نبض الحياة للرعاية المنزلية",
+    default: "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
+    template: "%s | شركة الدرع لمكافحة الآفات",
   },
   description:
-    "شركة نبض الحياة تقدم خدمات طبية منزلية متكاملة في مصر تشمل التمريض المنزلي، رعاية كبار السن، التحاليل المنزلية، والأشعة المنزلية بأعلى جودة.",
+    "شركة الدرع توفر خدمات إبادة حشرات ومكافحة آفات متكاملة في مصر تشمل إبادة الصراصير، مكافحة النمل الأبيض، بق الفراش، والفئران بأحدث الأمصال الألمانية الآمنة.",
 
   keywords: [
-    "رعاية منزلية",
-    "تمريض منزلي",
-    "رعاية كبار السن",
-    "تحاليل منزلية",
-    "أشعة منزلية",
-    "خدمات طبية منزلية في مصر",
+    "إبادة حشرات",
+    "مكافحة آفات",
+    "رش صراصير",
+    "مكافحة النمل الأبيض",
+    "إبادة بق الفراش",
+    "شركة رش حشرات في مصر",
+    "طرد الفئران والقوارض"
   ],
 
-  metadataBase: new URL("https://nabdalhayaat.com"),
+  metadataBase: new URL("https://eldaraapest.com"),
 
   openGraph: {
-    title: "نبض الحياة للرعاية المنزلية",
-    description: "أفضل خدمات الرعاية الطبية المنزلية في مصر.",
-    url: "https://nabdalhayaat.com",
-    siteName: "نبض الحياة",
+    title: "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
+    description: "أفضل خدمات مكافحة الحشرات والقوارض في مصر بأمصال آمنة.",
+    url: "https://eldaraapest.com",
+    siteName: "شركة الدرع",
     locale: "ar_EG",
     type: "website",
     images: [
@@ -44,18 +45,17 @@ export const metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "نبض الحياة للرعاية المنزلية",
+        alt: "شركة الدرع لإبادة الحشرات",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "نبض الحياة للرعاية المنزلية",
-    description: "خدمات طبية منزلية متكاملة في مصر.",
+    title: "شركة الدرع لمكافحة الآفات",
+    description: "خدمات إبادة حشرات وقوارض متكاملة وبضمان معتمد.",
     images: ["/images/logo.jpg"],
   },
-  // Favicon
   icons: {
     icon: "/favicon.ico",
   },
@@ -68,45 +68,29 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
-        <FloatingContactButtons />
+        <FloatingContactButtons serviceName="معاينة إبادة حشرات" />
 
+        {/* تحويل الـ Schema إلى بيزنس محلي بدلاً من طبي */}
         <Script
-          id="schema-medical"
+          id="schema-business"
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "MedicalBusiness",
-              name: "نبض الحياة للرعاية المنزلية",
-              url: "https://nabdalhayaat.com",
-              logo: "https://nabdalhayaat.com/images/logo.jpg",
-              contactPoint: {
+              "@type": "HomeAndConstructionBusiness",
+              "name": "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
+              "url": "https://eldaraapest.com",
+              "logo": "https://eldaraapest.com/images/logo.jpg",
+              "contactPoint": {
                 "@type": "ContactPoint",
-                telephone: "+201024193594",
-                contactType: "customer service",
-                areaServed: "EG",
+                "telephone": "+201024193594",
+                "contactType": "customer service",
+                "areaServed": "EG",
               },
             }),
           }}
         />
-        {process.env.NODE_ENV === "production" && (
-          <>
-            <Script
-              src="https://www.googletagmanager.com/gtag/js?id=AW-17985320440"
-              strategy="afterInteractive"
-            />
-
-            <Script id="google-ads-gtag" strategy="afterInteractive">
-              {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17985320440');
-  `}
-            </Script>
-          </>
-        )}
       </body>
     </html>
   );

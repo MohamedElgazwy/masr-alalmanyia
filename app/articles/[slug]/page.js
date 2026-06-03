@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { articlesData } from "@/app/data/articles";
 import CallButtons from "@/app/components/CallButtons";
 import ArticleMotionWrapper from "@/app/components/ArticleMotionWrapper";
-import { articlesData } from "@/app/data/articles";
 
 /* ================= Metadata ================= */
 export async function generateMetadata({ params }) {
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   if (!article) return {};
 
   return {
-    title: `${article.title} | Nabd Alhayaat`,
+    title: `${article.title} | شركة الدرع لإبادة الحشرات`,
     description: article.excerpt,
   };
 }
@@ -28,18 +28,18 @@ export default async function ArticlePage({ params }) {
     <main className="min-h-screen bg-white">
 
       {/* HERO */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-20">
+      <section className="bg-gradient-to-b from-emerald-50 to-white py-20">
         <ArticleMotionWrapper>
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <span className="inline-block mb-4 text-sm font-semibold text-blue-600 bg-blue-100 px-4 py-1 rounded-full">
-              مقالة طبية
+            <span className="inline-block mb-4 text-sm font-semibold text-emerald-700 bg-emerald-100 px-4 py-1 rounded-full">
+              نصائح وإرشادات
             </span>
 
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl font-bold text-slate-900 mb-6 leading-tight">
               {article.title}
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               {article.excerpt}
             </p>
           </div>
@@ -56,7 +56,7 @@ export default async function ArticlePage({ params }) {
               width={1200}
               height={600}
               priority
-              className="rounded-2xl shadow-xl w-full h-auto object-cover"
+              className="rounded-2xl shadow-xl w-full h-auto object-cover border-4 border-white"
             />
           </ArticleMotionWrapper>
         </div>
@@ -70,10 +70,10 @@ export default async function ArticlePage({ params }) {
               dir="rtl"
               className="
                 prose prose-lg max-w-none
-                prose-headings:text-blue-700
+                prose-headings:text-emerald-800
                 prose-headings:font-bold
-                prose-p:text-gray-700
-                prose-li:text-gray-700
+                prose-p:text-slate-700
+                prose-li:text-slate-700
               "
             >
               {article.content
@@ -85,15 +85,14 @@ export default async function ArticlePage({ params }) {
             </article>
           </ArticleMotionWrapper>
 
-          {/* MEDICAL NOTE */}
-          
+          {/* WARNING NOTE */}
           <ArticleMotionWrapper delay={0.4}>
-            <div className="mt-16 bg-blue-50 border-r-4 border-blue-600 p-6 rounded-xl">
-              <h3 className="text-xl font-bold text-blue-700 mb-3">
-                📌 تنويه طبي
+            <div className="mt-16 bg-amber-50 border-r-4 border-amber-500 p-6 rounded-xl">
+              <h3 className="text-xl font-bold text-amber-700 mb-3">
+                📌 تنويه هام
               </h3>
-              <p className="text-gray-700">
-                المعلومات الواردة للتوعية ولا تغني عن استشارة الطبيب المختص.
+              <p className="text-slate-700">
+                الطرق الوقائية المنزلية مفيدة للحد من الانتشار، ولكن في حالة تفاقم الإصابة أو ظهور حشرات خطيرة مثل النمل الأبيض أو بق الفراش، يجب الاستعانة بخبراء الإبادة فوراً لتجنب تلف الممتلكات.
               </p>
             </div>
           </ArticleMotionWrapper>
@@ -101,17 +100,17 @@ export default async function ArticlePage({ params }) {
       </section>
 
       {/* CTA */}
-      <section className="bg-blue-50 py-20 text-center">
+      <section className="bg-emerald-50/60 py-20 text-center border-t border-emerald-100">
         <ArticleMotionWrapper>
-          <h2 className="text-3xl font-bold text-blue-700 mb-6">
-            هل تحتاج إلى استشارة طبية منزلية؟
+          <h2 className="text-3xl font-bold text-emerald-800 mb-6">
+            هل تعاني من ظهور الحشرات في منشأتك؟
           </h2>
 
-          <p className="text-gray-700 mb-8">
-            فريق Nabd Alhayaat جاهز لمساعدتك داخل منزلك
+          <p className="text-slate-700 mb-8">
+            فريق شركة الدرع جاهز لفحص المكان وتقديم حلول الإبادة الفورية بالضمان.
           </p>
 
-          <CallButtons serviceName="استشارة طبية منزلية" />
+          <CallButtons serviceName="طلب معاينة لمكافحة الحشرات" />
         </ArticleMotionWrapper>
       </section>
 
