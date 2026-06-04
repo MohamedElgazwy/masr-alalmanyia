@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://nabdalhayaat.com/sitemap.xml",
+    sitemap: "https://eldaraapest.com/sitemap.xml",
   };
 }

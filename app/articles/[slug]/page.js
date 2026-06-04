@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import { articlesData } from "@/app/data/articles";
 import CallButtons from "@/app/components/CallButtons";
 import ArticleMotionWrapper from "@/app/components/ArticleMotionWrapper";
@@ -11,9 +12,27 @@ export async function generateMetadata({ params }) {
 
   if (!article) return {};
 
+  const url = `https://eldaraapest.com/articles/${slug}`;
+
   return {
     title: `${article.title} | شركة الدرع لإبادة الحشرات`,
     description: article.excerpt,
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      type: "article",
+      images: [
+        {
+          url: `https://eldaraapest.com${article.image}`,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    alternates: {
+      canonical: url,
+    },
   };
 }
 
@@ -25,7 +44,8 @@ export default async function ArticlePage({ params }) {
   if (!article) notFound();
 
   return (
-    <main className="min-h-screen bg-white">
+    <>
+      <main className="min-h-screen bg-white">
 
       {/* HERO */}
       <section className="bg-gradient-to-b from-emerald-50 to-white py-20">
@@ -114,6 +134,37 @@ export default async function ArticlePage({ params }) {
         </ArticleMotionWrapper>
       </section>
 
-    </main>
+      </main>
+
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: article.title,
+            description: article.excerpt,
+            image: `https://eldaraapest.com${article.image}`,
+            datePublished: article.date,
+            author: {
+              "@type": "Organization",
+              name: "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
+              url: "https://eldaraapest.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://eldaraapest.com/images/logo.jpg",
+              },
+            },
+          }),
+        }}
+      />
+
+    </>
+
   );
-}
