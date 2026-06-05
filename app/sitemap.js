@@ -1,5 +1,6 @@
-import { servicesData } from "../data/services";
-import { articlesData } from "../data/articles";
+import { articlesData } from "./data/articles";
+import { servicesData } from "./data/services";
+
 
 export default function sitemap() {
   // تم التحديث إلى الدومين الرسمي الجديد لشركة مصر سيرفيس
