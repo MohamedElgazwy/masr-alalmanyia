@@ -13,48 +13,52 @@ const cairo = Cairo({
   weight: ["400", "600", "700"],
 });
 
+// ================= METADATA FOR GLOBAL SEO =================
 export const metadata = {
   title: {
-    default: "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
-    template: "%s | شركة الدرع لمكافحة الآفات",
+    default: "مصر سيرفيس لإبادة الحشرات ومكافحة الآفات | الشركة الألمانية الأصلية",
+    template: "%s | مصر سيرفيس لمكافحة الآفات",
   },
   description:
-    "شركة الدرع توفر خدمات إبادة حشرات ومكافحة آفات متكاملة في مصر تشمل إبادة الصراصير، مكافحة النمل الأبيض، بق الفراش، والفئران بأحدث الأمصال الألمانية الآمنة.",
+    "مصر سيرفيس (مصر الألمانية) توفر أفضل خدمات إبادة حشرات ومكافحة آفات متكاملة في مصر بضمان 5 سنوات. تشمل إبادة الصراصير، الفئران، بق الفراش، والنمل بأحدث الأمصال الألمانية الآمنة.",
 
   keywords: [
-    "إبادة حشرات",
-    "مكافحة آفات",
-    "رش صراصير",
-    "مكافحة النمل الأبيض",
-    "إبادة بق الفراش",
-    "شركة رش حشرات في مصر",
-    "طرد الفئران والقوارض"
+    "مصر سيرفيس",
+    "الشركة الألمانية لمكافحة الحشرات",
+    "رقم الشركة الألمانية لإبادة الحشرات",
+    "إبادة حشرات في مصر",
+    "مكافحة آفات وقوارض",
+    "رش صراصير ونمل",
+    "إبادة بق الفراش بالتبخير",
+    "طرد الفئران",
+    "مصر الألمانية الأصلية"
   ],
 
-  metadataBase: new URL("https://eldaraapest.com"),
+  // تم التعديل إلى الدومين الرسمي الفعلي الخاص بك
+  metadataBase: new URL("https://misr-service.com"), 
 
   openGraph: {
-    title: "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
-    description: "أفضل خدمات مكافحة الحشرات والقوارض في مصر بأمصال آمنة.",
-    url: "https://eldaraapest.com",
-    siteName: "شركة الدرع",
+    title: "مصر سيرفيس لإبادة الحشرات ومكافحة الآفات",
+    description: "أفضل خدمات مكافحة الحشرات والقوارض في مصر بأمصال ألمانية آمنة 100% وبضمان 5 سنوات.",
+    url: "https://misr-service.com",
+    siteName: "مصر سيرفيس",
     locale: "ar_EG",
     type: "website",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "شركة الدرع لإبادة الحشرات",
+        alt: "مصر سيرفيس لإبادة الحشرات",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "شركة الدرع لمكافحة الآفات",
-    description: "خدمات إبادة حشرات وقوارض متكاملة وبضمان معتمد.",
-    images: ["/images/logo.jpg"],
+    title: "مصر سيرفيس (الشركة الألمانية لمكافحة الآفات)",
+    description: "خدمات إبادة حشرات وقوارض متكاملة وبضمان معتمد 5 سنوات.",
+    images: ["/logo.png"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -68,9 +72,11 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
-        <FloatingContactButtons serviceName="معاينة إبادة حشرات" />
+        
+        {/* أزرار الاتصال العائمة مخصصة بهويتك الجديدة */}
+        <FloatingContactButtons serviceName="معاينة إبادة حشرات - مصر سيرفيس" />
 
-        {/* تحويل الـ Schema إلى بيزنس محلي بدلاً من طبي */}
+        {/* سكيما البيزنس المحلي (Local Business Schema) مهيأة بالكامل لمصر سيرفيس برابط الدومين الجديد */}
         <Script
           id="schema-business"
           type="application/ld+json"
@@ -79,15 +85,21 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
-              "name": "شركة الدرع لإبادة الحشرات ومكافحة الآفات",
-              "url": "https://eldaraapest.com",
-              "logo": "https://eldaraapest.com/images/logo.jpg",
+              "name": "مصر سيرفيس لإبادة الحشرات ومكافحة الآفات",
+              "url": "https://misr-service.com",
+              "logo": "https://misr-service.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+201024193594",
+                "telephone": "+201035095011", 
                 "contactType": "customer service",
                 "areaServed": "EG",
               },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "22 شارع جامعة الدول العربية - المهندسين",
+                "addressLocality": "Giza",
+                "addressCountry": "EG"
+              }
             }),
           }}
         />

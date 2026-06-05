@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.6 }}
           className="text-3xl font-bold text-emerald-800 mb-14"
         >
-          لماذا تختار شركة الدرع لمكافحة الآفات؟
+          لماذا تختار الشركة الألمانية (مصر سيرفيس) لمكافحة الآفات؟
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-8 justify-center">

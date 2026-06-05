@@ -4,6 +4,7 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://eldaraapest.com/sitemap.xml",
+    // تم التحديث ليرتبط بخريطة الموقع على الدومين الجديد
+    sitemap: "https://misr-service.com/sitemap.xml",
   };
 }

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function WhatsAppButton() {
   // تم توحيد الرقم مع باقي صفحات الموقع، يمكنك تعديله لأي رقم آخر
   const phone = "01111104638"; // رقم الهاتف الرئيسي لشركة الدرع، تأكد من تحديثه إذا تغير في المستقبل
-  const message = "مرحبًا شركة الدرع، أريد الاستفسار عن خدمات إبادة الحشرات ومكافحة الآفات المتاحة والضمان.";
+  const message = "مرحبًا الشركة الألمانية، أريد الاستفسار عن خدمات إبادة الحشرات ومكافحة الآفات المتاحة والضمان.";
   const link = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   return (
