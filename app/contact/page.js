@@ -1,3 +1,6 @@
+"use client"; // تحويل المكون إلى Client Component لتمكين التفاعل وإدارة الـ State
+
+import { useState } from "react";
 import Link from "next/link";
 import CallButtons from "../components/CallButtons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,25 +14,55 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-// ================= METADATA FOR SEO =================
-export const metadata = {
-  title: "رقم الشركة الألمانية لمكافحة الحشرات | اتصل بـ مصر سيرفيس",
-  description: "تواصل مع مصر سيرفيس (الشركة الألمانية الأصلية لإبادة الحشرات). أرقام خدمة العملاء، العناوين، وحجز معاينة فورية لجميع المحافظات. خدمة 24 ساعة.",
-  keywords: [
-    "رقم الشركة الألمانية لمكافحة الحشرات",
-    "اتصل بنا الشركة الألمانية",
-    "رقم شركة مصر سيرفيس",
-    "تواصل مع خبراء الإبادة",
-    "أرقام شركات إبادة الحشرات",
-    "مصر الألمانية الأصلية",
-  ],
-};
-
 export default function ContactPage() {
+  // إنشاء الـ State لتخزين بيانات الاستمارة وحالة الإرسال (JavaScript عادية بدون أنواع)
+  const [formData, setFormData] = useState({ name: "", phone: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  // دالة التعامل مع تغيير المدخلات
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // دالة إرسال البيانات
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // منع الصفحة من إعادة التحميل الافتراضية
+    
+    // التحقق من أن الحقول ليست فارغة
+    if (!formData.name || !formData.phone) {
+      setSubmitStatus({ success: false, message: "برجاء كتابة الاسم ورقم الهاتف أولاً." });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // محاكاة الإرسال بـ setTimeout (يمكنك ربط الـ API الخاص بك هنا لاحقاً)
+      await new Promise((resolve) => setTimeout(resolve, 1500)); 
+
+      // عند النجاح
+      setSubmitStatus({ 
+        success: true, 
+        message: "تم استقبال طلبك بنجاح! سيتصل بك أحد خبراء الدعم الفني فوراً." 
+      });
+      setFormData({ name: "", phone: "" }); // تفريغ الخانات بعد النجاح
+    } catch (error) {
+      setSubmitStatus({ 
+        success: false, 
+        message: "حدث خطأ غير متوقع، يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة." 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-slate-50/50">
       
-      {/* ================= HERO SECTION (SEO Optimized) ================= */}
+      {/* ================= HERO SECTION ================= */}
       <section className="bg-emerald-900 py-24 text-center border-b border-emerald-800 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute -top-20 -left-20 w-80 h-80 bg-emerald-400 rounded-full blur-3xl"></div>
@@ -60,9 +93,10 @@ export default function ContactPage() {
                 <FontAwesomeIcon icon={faPhone} />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">أرقام التواصل</h3>
-              <div className="space-y-2 text-slate-600 font-bold dir-ltr">
-                <a href="tel:01035095011" className="block hover:text-emerald-700 transition">010 3509 5011</a>
-                <a href="tel:01035099013" className="block hover:text-emerald-700 transition">010 3509 9013</a>
+              <div className="space-y-2 text-slate-600 font-bold">
+                <a href="tel:01111104638" className="block hover:text-emerald-700 transition" style={{ direction: 'ltr', display: 'inline-block' }}>
+                  011 1110 4638
+                </a>
               </div>
             </div>
 
@@ -72,9 +106,9 @@ export default function ContactPage() {
                 <FontAwesomeIcon icon={faWhatsapp} />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">خدمة واتساب</h3>
-              <div className="space-y-2 text-slate-600 font-bold dir-ltr">
-                <a href="https://wa.me/201108526070" target="_blank" rel="noopener noreferrer" className="block hover:text-green-600 transition">
-                  011 0852 6070
+              <div className="space-y-2 text-slate-600 font-bold">
+                <a href="https://wa.me/201111104638" target="_blank" rel="noopener noreferrer" className="block hover:text-green-600 transition" style={{ direction: 'ltr', display: 'inline-block' }}>
+                  011 1110 4638
                 </a>
               </div>
               <p className="text-sm text-slate-500 mt-3">متاح استقبال الصور والاستفسارات</p>
@@ -86,8 +120,8 @@ export default function ContactPage() {
                 <FontAwesomeIcon icon={faEnvelope} />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-4">البريد الإلكتروني</h3>
-              <a href="mailto:sales@sunova-pestcontrol.com" className="text-slate-600 font-medium hover:text-amber-600 transition break-words">
-                sales@sunova-pestcontrol.com
+              <a href="mailto:misr-service@gmail.com" className="text-slate-600 font-medium hover:text-amber-600 transition break-words" style={{ direction: 'ltr', display: 'inline-block' }}>
+                misr-service@gmail.com
               </a>
               <p className="text-sm text-slate-500 mt-3">لطلبات الشركات والمصانع</p>
             </div>
@@ -156,12 +190,15 @@ export default function ContactPage() {
               <p className="text-slate-500 text-sm">سيقوم أحد خبراء الدعم الفني بالاتصال بك فوراً لمعرفة تفاصيل المشكلة.</p>
             </div>
 
-            {/* تم إزالة onSubmit من الـ form لتفادي الخطأ */}
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-2">الاسم الكريم</label>
                 <input 
                   type="text" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   placeholder="اكتب اسمك هنا..." 
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition"
                 />
@@ -171,17 +208,30 @@ export default function ContactPage() {
                 <label className="block text-sm font-bold text-slate-700 mb-2">رقم الهاتف</label>
                 <input 
                   type="tel" 
-                  placeholder="رقم الموبايل للتواصل..." 
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition text-right dir-ltr"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  placeholder="011 1110 4638" 
+                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition text-left"
+                  style={{ direction: 'ltr' }}
                 />
               </div>
 
+              {/* عرض رسائل الحالة للمخدم */}
+              {submitStatus && (
+                <div className={`p-4 rounded-lg text-sm font-medium ${submitStatus.success ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-red-50 text-red-800 border border-red-200'}`}>
+                  {submitStatus.message}
+                </div>
+              )}
+
               <button 
-                type="button"
-                className="w-full bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-lg py-4 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg"
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-emerald-800 hover:bg-emerald-900 disabled:bg-slate-400 text-white font-bold text-lg py-4 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg cursor-pointer disabled:cursor-not-allowed"
               >
-                <span>طلب اتصال مجاني</span>
-                <FontAwesomeIcon icon={faPaperPlane} />
+                <span>{isSubmitting ? "جاري الإرسال..." : "طلب اتصال مجاني"}</span>
+                {!isSubmitting && <FontAwesomeIcon icon={faPaperPlane} />}
               </button>
             </form>
           </div>

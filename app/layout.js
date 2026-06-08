@@ -2,11 +2,14 @@ import { Cairo } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import FlyingInsect from "./components/FlyingInsect";
+import ScrollInsect from "./components/ScrollInsect";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import FloatingContactButtons from "./components/FloatingContactButtons";
 import Script from "next/script";
 config.autoAddCss = false;
+
 
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -71,10 +74,12 @@ export default function RootLayout({ children }) {
       <body className={cairo.className}>
         <Navbar />
         {children}
+        <FlyingInsect />
+        <ScrollInsect />
         <Footer />
         
         {/* أزرار الاتصال العائمة مخصصة بهويتك الجديدة */}
-        <FloatingContactButtons serviceName="معاينة إبادة حشرات - مصر سيرفيس" />
+        <FloatingContactButtons serviceName="" />
 
         {/* سكيما البيزنس المحلي (Local Business Schema) مهيأة بالكامل لمصر سيرفيس برابط الدومين الجديد */}
         <Script

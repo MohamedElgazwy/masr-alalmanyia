@@ -7,9 +7,10 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 export default function FloatingContactButtons({
   serviceName = "الخدمات الطبية المنزلية",
 }) {
-  const phoneNumber = "01111104638"; // رقم الهاتف الرئيسي لشركة الدرع، تأكد من تحديثه إذا تغير في المستقبل
+  const phoneNumber = "01111104638"; // رقم الهاتف الرئيسي، احتفظ بالصيغة المحلية
+  const companyName = "مصر سيرفيس";
 
-  const whatsappMessage = `مرحباً، أود الاستفسار عن خدمة ${serviceName}`;
+  const whatsappMessage = `مرحبًا ${companyName} 👋\nأود الاستفسار وحجز خدمة: *${serviceName}*\nبرجاء تزويدي بالتفاصيل، المواعيد المتاحة وتكلفة الرش والضمان.`;
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     whatsappMessage
   )}`;

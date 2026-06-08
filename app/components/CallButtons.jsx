@@ -1,10 +1,11 @@
 "use client";
 
 export default function CallButtons({ serviceName }) {
-  const phone = "01111104638"; // رقم الهاتف الرئيسي لشركة الدرع، تأكد من تحديثه إذا تغير في المستقبل
+  const phone = "01111104638"; // رقم الهاتف الرئيسي (احتفظ بالصيغة المحلية)
+  const companyName = "مصر سيرفيس";
 
   const message = encodeURIComponent(
-    `مرحبًا شركة الدرع 👋  
+    `مرحبًا ${companyName} 👋  
 أود الاستفسار وحجز خدمة: *${serviceName}*.  
 برجاء تزويدي بالتفاصيل، المواعيد المتاحة وتكلفة الرش والضمان.`
   );

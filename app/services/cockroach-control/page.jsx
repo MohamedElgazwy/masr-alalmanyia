@@ -38,7 +38,7 @@ export default function CockroachControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image3.jpg" /* تأكد من توفر صورة مناسبة في هذا المسار */
+            src="/images/cockroach.jpg" /* صورة مخصصة لخدمة مكافحة الصراصير */
             alt="الشركة الألمانية لمكافحة الصراصير - مصر سيرفيس"
             fill
             priority

@@ -38,7 +38,7 @@ export default function TickControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image10.jpg" /* تأكد من توفر صورة مناسبة للقراد أو المكافحة في هذا المسار */
+            src="/images/image10.jpg" /* صورة لقراد/خدمة القراد (احتياطي) */
             alt="الشركة الألمانية لمكافحة القراد - مصر سيرفيس"
             fill
             priority

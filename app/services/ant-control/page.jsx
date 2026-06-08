@@ -37,7 +37,7 @@ export default function AntControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image1.jpg" /* تأكد من وجود صورة مناسبة للنمل أو المكافحة في هذا المسار */
+            src="/images/ant.jpg" /* صورة مخصصة لخدمة مكافحة النمل */
             alt="الشركة الألمانية لمكافحة النمل - مصر سيرفيس"
             fill
             priority

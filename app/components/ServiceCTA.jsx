@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 
 export default function ServiceCTA({
   serviceName,
-  phone = "01111104638", // رقم الهاتف الرئيسي لشركة الدرع، تأكد من تحديثه إذا تغير في المستقبل
+  phone = "01111104638", // رقم الهاتف الرئيسي لشركة مصر سيرفيس، تأكد من تحديثه إذا تغير في المستقبل
 }) {
-  const message = `مرحبًا شركة الدرع، 👋
+  const message = `مرحبًا شركة مصر سيرفيس 👋
 أود حجز خدمة: *${serviceName}*
 
 الاسم:

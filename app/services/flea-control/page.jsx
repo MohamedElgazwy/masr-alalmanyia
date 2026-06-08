@@ -38,7 +38,7 @@ export default function FleaControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image8.jpg" /* تأكد من توفر صورة مناسبة للبراغيث أو المكافحة في هذا المسار */
+            src="/images/flea.jpg" /* صورة مخصصة لخدمة مكافحة البراغيث */
             alt="الشركة الألمانية لمكافحة البراغيث - مصر سيرفيس"
             fill
             priority

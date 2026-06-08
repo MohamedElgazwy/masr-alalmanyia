@@ -37,7 +37,7 @@ export default function ScorpionControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image2.jpg" /* تأكد من توفر صورة مناسبة للعقارب أو المكافحة في هذا المسار */
+            src="/images/image2.jpg" /* صورة مناسبة للعقارب (احتياطي) */
             alt="الشركة الألمانية لمكافحة العقارب - مصر سيرفيس"
             fill
             priority

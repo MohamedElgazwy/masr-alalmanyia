@@ -37,7 +37,7 @@ export default function MosquitoControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image7.jpg" /* تأكد من وجود صورة مناسبة للناموس أو أجهزة الرش في هذا المسار */
+            src="/images/mosq.jpg" /* صورة مخصصة لخدمة مكافحة الناموس */
             alt="الشركة الألمانية لمكافحة الناموس - مصر سيرفيس"
             fill
             priority

@@ -38,7 +38,7 @@ export default function GeckoControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image1.jpg" /* يرجى التأكد من مسار صورة مناسبة للأبراص أو المكافحة */
+            src="/images/gecko.jpg" /* صورة مخصصة لخدمة مكافحة الإبراص */
             alt="الشركة الألمانية لمكافحة الأبراص - مصر سيرفيس"
             fill
             priority

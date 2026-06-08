@@ -37,7 +37,7 @@ export default function BeeControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image5.jpg" /* تأكد من توفر صورة مناسبة للنحل أو خلايا النحل في هذا المسار */
+            src="/images/bee.jpg" /* صورة مخصصة لخدمة مكافحة النحل */
             alt="الشركة الألمانية لمكافحة النحل - مصر سيرفيس"
             fill
             priority

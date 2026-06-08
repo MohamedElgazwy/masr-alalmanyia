@@ -38,7 +38,7 @@ export default function SnakeControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image9.jpg" /* تأكد من توفر صورة مناسبة للزواحف أو المكافحة في هذا المسار */
+            src="/images/snake.jpg" /* صورة مخصصة لخدمة مكافحة الثعابين */
             alt="الشركة الألمانية لمكافحة الثعابين - مصر سيرفيس"
             fill
             priority

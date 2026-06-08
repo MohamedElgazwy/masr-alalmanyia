@@ -38,7 +38,7 @@ export default function SilverfishControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image8.jpg" /* تأكد من توفر صورة مناسبة للسمكة الفضية أو المكافحة في هذا المسار */
+            src="/images/silverfish.jpg" /* صورة مخصصة لخدمة السمكة الفضية */
             alt="الشركة الألمانية لمكافحة السمكة الفضية - مصر سيرفيس"
             fill
             priority

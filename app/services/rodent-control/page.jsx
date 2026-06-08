@@ -36,7 +36,7 @@ export default function RodentControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image6.jpg" /* تأكد من وجود صورة مناسبة للفئران أو المكافحة في هذا المسار */
+            src="/images/image6.jpg" /* صورة مخصصة/احتياطية لخدمة إبادة الفئران */
             alt="الشركة الألمانية لمكافحة الفئران - مصر سيرفيس"
             fill
             priority

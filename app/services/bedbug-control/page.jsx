@@ -37,7 +37,7 @@ export default function BedbugControlPage() {
       <section className="relative h-[65vh] min-h-[500px] flex items-center justify-center overflow-hidden border-b border-emerald-900">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/image4.jpg" /* تأكد من توفر صورة مناسبة في هذا المسار */
+            src="/images/image4.jpg" /* صورة مناسبة لبراغيث/بق الفراش (احتياطي) */
             alt="الشركة الألمانية لمكافحة بق الفراش - مصر سيرفيس"
             fill
             priority
