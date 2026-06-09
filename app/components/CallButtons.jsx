@@ -16,7 +16,7 @@ export default function CallButtons({ serviceName }) {
     <a
       href={whatsappUrl}
       target="_blank"
-      className="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:scale-105"
+      className="inline-block bg-emerald-500 mb-1.5  hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all hover:scale-105"
     >
       احجز عبر واتساب الآن
     </a>

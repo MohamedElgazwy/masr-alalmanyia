@@ -135,15 +135,15 @@ export default function Footer() {
               <span>01111104638</span>
             </a>
 
-            <a 
-              href="https://wa.me/01111104638" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-6 rounded-full shadow-sm transition dir-ltr"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} className="text-lg" />
-              <span>01111104638</span>
-            </a>
+          <a
+  href="https://wa.me/201111104638"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-6 rounded-full shadow-sm transition dir-ltr"
+>
+  <FontAwesomeIcon icon={faWhatsapp} className="text-lg" />
+  <span>01111104638</span>
+</a>
           </div>
 
           {/* البريد الإلكتروني المنسق أسفل الأزرار */}
