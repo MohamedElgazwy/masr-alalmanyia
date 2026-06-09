@@ -61,7 +61,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "مصر سيرفيس (الشركة الألمانية لمكافحة الآفات)",
     description: "خدمات إبادة حشرات وقوارض متكاملة وبضمان معتمد 5 سنوات.",
-    images: ["/logo.png"],
+    images: ["/logo.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
@@ -92,7 +92,7 @@ export default function RootLayout({ children }) {
               "@type": "HomeAndConstructionBusiness",
               "name": "مصر سيرفيس لإبادة الحشرات ومكافحة الآفات",
               "url": "https://misr-service.com",
-              "logo": "https://misr-service.com/logo.png",
+              "logo": "https://misr-service.com/logo.jpg",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+201035095011", 
