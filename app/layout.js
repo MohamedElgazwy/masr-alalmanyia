@@ -49,7 +49,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo.jpg",
         width: 1200,
         height: 630,
         alt: "مصر سيرفيس لإبادة الحشرات",
