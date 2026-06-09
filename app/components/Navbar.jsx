@@ -27,7 +27,7 @@ export default function Navbar() {
         {/* Logo Section */}
         <Link href="/" className="flex items-center">
           <Image
-            src='/images/logo.png'
+            src='/images/logo.jpg'
             alt="مصر سيرفيس - إبادة الحشرات والقوارض"
             width={180}
             height={60}
