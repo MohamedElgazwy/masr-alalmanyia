@@ -70,7 +70,7 @@ export default function Home() {
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
               أفضل شركة لإبادة الحشرات في مصر <br />
-              <span className="text-emerald-400">بتقنيات ومعدات المانية وايادى مصرية..</span>
+              <span className="text-emerald-400">بتقنيات ومعدات المانية بايادى مصرية..</span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-200 mb-10 leading-relaxed font-medium">
