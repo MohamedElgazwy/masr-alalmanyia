@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBug } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 
 export default function ScrollInsect() {
   const containerRef = useRef(null);
@@ -58,32 +59,28 @@ export default function ScrollInsect() {
       <div className="relative w-2 h-[200px] bg-slate-200/60 backdrop-blur-xs rounded-full border border-slate-300/40 shadow-inner">
         
         {/* فقاعة الكلام (الحقني!) */}
-        <div 
-          className="absolute left-7 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md whitespace-nowrap z-10"
-          style={{
-            top: "var(--scroll-percent)",
-            transform: "translateY(-50%)",
-            // إضافة خاصية transition هنا تجعل انتقال الحركة ناعم جداً وانسيابي
-            transition: "top 0.2s cubic-bezier(0.25, 1, 0.5, 1)"
-          }}
-        >
-          الحقني!
-          <div className="absolute left-[-3px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-y-[4px] border-y-transparent border-r-[4px] border-r-red-500"></div>
-        </div>
+        
 
         {/* الحشرة */}
         <div
-          className="absolute text-xl text-amber-950 filter drop-shadow-sm"
-          style={{
-            top: "var(--scroll-percent)",
-            left: "50%",
-            transform: "translate(-50%, -50%) rotate(var(--bug-rotation))",
-            // السر في السلاسة: الترانزيشن يعمل هيدروليك ناعم للحشرة أثناء النزول والصعود
-            transition: "top 0.2s cubic-bezier(0.25, 1, 0.5, 1), transform 0.1s linear"
-          }}
-        >
-          <FontAwesomeIcon icon={faBug} />
-        </div>
+  className="absolute"
+  style={{
+    top: "var(--scroll-percent)",
+    left: "50%",
+    width: "30px",
+    height: "30px",
+    transform: "translate(-50%, -50%) rotate(var(--bug-rotation))",
+    transition:
+      "top 0.2s cubic-bezier(0.25,1,0.5,1), transform 0.1s linear",
+  }}
+>
+  <Image
+    src="/images/insecttt.png"
+    alt="Insect"
+    fill
+    className="object-contain"
+  />
+</div>
 
       </div>
     </div>

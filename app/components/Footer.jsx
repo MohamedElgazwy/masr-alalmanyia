@@ -82,7 +82,7 @@ export default function Footer() {
 
         {/* العمود الثاني: خدمات سنوفا (قائمة الخدمات الطويلة) */}
         <div>
-          <h3 className="text-xl font-bold text-slate-900 mb-6 border-b border-slate-400/30 pb-2">خدمات سنوفا</h3>
+          <h3 className="text-xl font-bold text-slate-900 mb-6 border-b border-slate-400/30 pb-2">خدمات مصر سيرفيس</h3>
           <ul className="space-y-3 text-base font-bold">
             {services.map((service) => (
               <li key={service}>
@@ -105,7 +105,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">العنوان 1 :</h3>
             <p className="text-slate-700 font-medium leading-relaxed">
-              22 شارع جامعه الدول العربيه - المهندسين - الجيزة
+69 شارع وزارة الزراعة-الدقى-الجيزة
             </p>
           </div>
 
@@ -113,7 +113,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">العنوان 2 :</h3>
             <p className="text-slate-700 font-medium leading-relaxed">
-              103 شارع الحجاز - مصر الجديده
+21 شارع شهاب لبيب-مصطفى النحاس مدينة نصر
             </p>
           </div>
 

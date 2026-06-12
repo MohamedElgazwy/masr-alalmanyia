@@ -64,13 +64,13 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-center mt-12">
           <div className="max-w-4xl mx-auto text-white">
-            <span className="inline-block bg-amber-500 text-slate-900 font-bold px-5 py-2 rounded-full text-sm md:text-base mb-6 shadow-lg">
-              الشركة الألمانية الأصلية | مصر سيرفيس
-            </span>
+            <span className="inline-block bg-emerald-400 text-slate-900 font-bold px-5 py-2 rounded-full text-sm md:text-base mb-6 shadow-lg">
+  الشركة الألمانية الأصلية | مصر سيرفيس
+</span>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
               أفضل شركة لإبادة الحشرات في مصر <br />
-              <span className="text-emerald-400">بتقنيات مصر الألمانية المعتمدة</span>
+              <span className="text-emerald-400">بتقنيات ومعدات المانية وايادى مصرية..</span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-200 mb-10 leading-relaxed font-medium">
