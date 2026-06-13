@@ -180,7 +180,6 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent" />
                   <h3 className="absolute bottom-4 right-6 text-xl font-bold text-white">
                     {service.title}
                   </h3>
