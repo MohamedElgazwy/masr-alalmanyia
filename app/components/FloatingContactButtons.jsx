@@ -11,7 +11,7 @@ export default function FloatingContactButtons({
   const companyName = "مصر سيرفيس";
 
   const whatsappMessage = `مرحبًا ${companyName} 👋\nأود الاستفسار وحجز خدمة: *${serviceName}*\nبرجاء تزويدي بالتفاصيل، المواعيد المتاحة وتكلفة الرش والضمان.`;
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+  const whatsappLink = `https://wa.me/2${phoneNumber}?text=${encodeURIComponent(
     whatsappMessage
   )}`;
 
